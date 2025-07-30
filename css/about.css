@@ -16,10 +16,6 @@
     text-align: center;
 }
 
-.theaboutcontent{
-    animation: wiggle 2s;
-}
-
 .aboutintro{
     padding:5em;
     width:100%;
@@ -586,20 +582,5 @@
 
     }
 }
-
-@keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(2deg) translateX(1px); }
-    20% { transform: rotate(-2deg) translateX(-1px); }
-    30% { transform: rotate(1deg) translateY(1px); }
-    40% { transform: rotate(-1deg) translateY(-1px); }
-    50% { transform: rotate(2deg) translateX(-1px); }
-    60% { transform: rotate(-2deg) translateX(1px); }
-    70% { transform: rotate(1deg) translateY(-1px); }
-    80% { transform: rotate(-1deg) translateY(1px); }
-    90% { transform: rotate(1deg) translateX(1px); }
-    100% { transform: rotate(0deg); }
-}
-
 
 
