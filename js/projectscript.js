@@ -2,6 +2,7 @@ const modalOverlay = document.getElementById('modalOverlay');
 const modalContentSoftware = document.getElementById('softwareprojectcontenttext');
 const modalContentMarketing = document.getElementById('marketingprojectcontenttext');
 const modalContentImage = document.getElementById('imageprojectcontenttext');
+const modalinside = document.getElementsByClassName('projectcontenttext');
 
 function togglecontenttext(param){
     let contentId = document.getElementById(`${param}projectcontenttextmb`);
@@ -17,17 +18,28 @@ function togglecontenttext2(param){
 
 
 modalOverlay.addEventListener('click', function (event) {
+    event.stopPropagation();
     if (!modalContentSoftware.contains(event.target)) {
         modalContentSoftware.classList.add('hidden');
         modalOverlay.classList.add('hidden'); // Hide the modal
+    }
+    if (modalContentSoftware.contains(event.target)) {
+        modalContentSoftware.classList.add('text-white');// Hide the modal
+        modalOverlay.classList.add('text-white');
     }
     if (!modalContentMarketing.contains(event.target)) {
         modalContentMarketing.classList.add('hidden');
         modalOverlay.classList.add('hidden'); // Hide the modal
     }
+    if (modalContentMarketing.contains(event.target)) {
+        modalContentMarketing.classList.add('text-white');
+    }
     if (!modalContentImage.contains(event.target)) {
         modalContentImage.classList.add('hidden');
         modalOverlay.classList.add('hidden'); // Hide the modal
+    }
+    if (modalContentImage.contains(event.target)) {
+        modalContentImage.classList.add('text-white');
     }
   });
 
