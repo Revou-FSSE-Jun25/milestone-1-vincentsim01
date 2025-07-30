@@ -1,4 +1,6 @@
-const modalOverlay = document.getElementById('modalOverlay');
+const modalOverlaysoftware = document.getElementById('modalOverlaysoftware');
+const modalOverlaymarketing = document.getElementById('modalOverlaymarketing');
+const modalOverlayimage = document.getElementById('modalOverlayimage');
 const modalContentSoftware = document.getElementById('softwareprojectcontenttext');
 const modalContentMarketing = document.getElementById('marketingprojectcontenttext');
 const modalContentImage = document.getElementById('imageprojectcontenttext');
@@ -9,39 +11,58 @@ function togglecontenttext(param){
     contentId.classList.toggle("hidden");
 }
 
-function togglecontenttext2(param){
-    let contentId = document.getElementById(`${param}projectcontenttext`);
+function togglecontenttext2software(){
+    let contentId = document.getElementById(`softwareprojectcontenttext`);
     contentId.classList.toggle("hidden");
-    modalOverlay.classList.toggle("hidden");
+    // alert(`modalOverlay${param}`)
+    modalOverlaysoftware.classList.toggle("hidden");
 }
 
+function togglecontenttext2marketing(){
+    let contentId = document.getElementById(`marketingprojectcontenttext`);
+    contentId.classList.toggle("hidden");
+    // alert(`modalOverlay${param}`)
+    modalOverlaymarketing.classList.toggle("hidden");
+}
 
+function togglecontenttext2image(){
+    let contentId = document.getElementById(`imageprojectcontenttext`);
+    contentId.classList.toggle("hidden");
+    // alert(`modalOverlay${param}`)
+    modalOverlayimage.classList.toggle("hidden");
+}
 
-modalOverlay.addEventListener('click', function (event) {
+// modalContentSoftware.addEventListener('click', function(event){
+//     event.stopPropagation();
+// })
+
+modalOverlaysoftware.addEventListener('click', function (event) {
     event.stopPropagation();
     if (!modalContentSoftware.contains(event.target)) {
         modalContentSoftware.classList.add('hidden');
-        modalOverlay.classList.add('hidden'); // Hide the modal
+        modalOverlaysoftware.classList.add('hidden');
     }
-    if (modalContentSoftware.contains(event.target)) {
-        modalContentSoftware.classList.add('text-white');// Hide the modal
-        modalOverlay.classList.add('text-white');
-    }
+
+  });
+
+  modalOverlaymarketing.addEventListener('click', function (event) {
+    event.stopPropagation();
     if (!modalContentMarketing.contains(event.target)) {
         modalContentMarketing.classList.add('hidden');
-        modalOverlay.classList.add('hidden'); // Hide the modal
+        modalOverlaymarketing.classList.add('hidden');
     }
-    if (modalContentMarketing.contains(event.target)) {
-        modalContentMarketing.classList.add('text-white');
-    }
+
+  });
+
+  modalOverlayimage.addEventListener('click', function (event) {
+    event.stopPropagation();
     if (!modalContentImage.contains(event.target)) {
         modalContentImage.classList.add('hidden');
-        modalOverlay.classList.add('hidden'); // Hide the modal
+        modalOverlayimage.classList.add('hidden');
     }
-    if (modalContentImage.contains(event.target)) {
-        modalContentImage.classList.add('text-white');
-    }
+
   });
+
 
 
 
