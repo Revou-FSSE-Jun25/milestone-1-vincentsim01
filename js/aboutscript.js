@@ -103,10 +103,34 @@ function toggleDarkMode(){
 }
 
 const modalsegmenttextcontainer = document.getElementById('aboutsegmenttextcontainer')
-const educationcontent = document.getElementById('education-content2')
+// const educationcontent = document.getElementById('education-content2')
 
 
-function showsegmenttext(){
+function showsegmenttext(param){
     // modalsegmenttextcontainer.classList.toggle('hidden');
-    educationcontent.classList.toggle('hidden');
+    const textcontent = document.getElementById(`${param}-content2`)
+    textcontent.classList.toggle('hidden');
+    modaloverlay.classList.toggle('hidden');
 }
+
+const modaloverlay = document.getElementById('modaloverlay');
+const modaleducation = document.getElementById('education-content2');
+const modalexperience = document.getElementById('experience-content2');
+const modallife = document.getElementById('life-content2');
+
+
+modaloverlay.addEventListener("click", function(event){
+    if(!modaleducation.contains(event.target)){
+        modaleducation.classList.add('hidden');
+        modaloverlay.classList.add('hidden');
+    }
+    if(!modalexperience.contains(event.target)){
+        modalexperience.classList.add('hidden');
+        modaloverlay.classList.add('hidden');
+    }
+    if(!modallife.contains(event.target)){
+        modallife.classList.add('hidden');
+        modaloverlay.classList.add('hidden');
+    }
+})
+

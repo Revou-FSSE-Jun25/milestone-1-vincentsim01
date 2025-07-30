@@ -82,7 +82,7 @@
     </div>
 </section>
 
-<section class="aboutintro bg-[url('https://i.ibb.co/BVCkmJFP/st-john-island.jpg')] bg-no-repeat bg-cover bg-center p-1 transition-all duration-[2000ms] md:h-[80vh]">
+<section class="aboutintro bg-[url('https://i.ibb.co/BVCkmJFP/st-john-island.jpg')] relative bg-no-repeat bg-cover bg-center p-1 transition-all duration-[2000ms] md:h-[80vh]">
     <div class="block p-1 text-center md:pt-10 md:block md:top-0">
         <h2 class="aboutintrotext font-bold text-2xl">
             <span class="icon">👨‍💻</span>
@@ -104,7 +104,7 @@
                         <h3 class="segment-title">Education</h3>
                     </div>
                     <button onclick="toggleSegment('education')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105 " id="education-btn" >Expand</button>
-                    <button onclick="showsegmenttext()" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
+                    <button onclick="showsegmenttext('education')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 </div>
                 <div class="segment-content hidden" id="education-content">
                     <div class="segment-text text-[0.6em] p-3">
@@ -130,13 +130,15 @@
         
             <!-- Work Experience Section -->
             <div class="segment border bg-white/50 rounded-md p-3 md:w-[29%] md:inline-block md:h-auto hover:scale-105 transition-all duration-[500ms]" id="experience">
-                <div class="segment-header" onclick="toggleSegment('experience')">
+                <div class="segment-header" >
                     <div class="segment-info">
                         <div class="segment-icon experience-icon">💼</div>
                         <h3 class="segment-title">Work Experience</h3>
                     </div>
-                    <button class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="experience-btn">Expand</button>
+                    
                 </div>
+                <button onclick="toggleSegment('experience')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="experience-btn">Expand</button>
+                <button onclick="showsegmenttext('experience')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 <div class="segment-content hidden" id="experience-content">
                     <div class="segment-text text-[0.6em] p-3">
                         <div class="border border-white text-center">
@@ -160,13 +162,15 @@
         
             <!-- Life History Section -->
             <div class="segment border bg-white/50 rounded-md p-3 md:w-[29%] md:inline-block md:h-auto hover:scale-105 transition-all duration-[500ms]" id="life">
-                <div class="segment-header" onclick="toggleSegment('life')">
+                <div class="segment-header">
                     <div class="segment-info">
                         <div class="segment-icon life-icon">🌟</div>
                         <h3 class="segment-title">Achievement</h3>
                     </div>
-                    <button class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="life-btn">Expand</button>
+                   
                 </div>
+                <button onclick="toggleSegment('life')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="experience-btn">Expand</button>
+                <button onclick="showsegmenttext('life')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 <div class="segment-content hidden" id="life-content">
                     <div class="segment-text text-[0.6em] p-3">
                         <div class="border border-white text-center">
@@ -201,24 +205,55 @@
 
 
             </div>
+            <div class=" bg-white/90 m-5 h-[100%] hidden w-[95%] border absolute z-index-50 top-[10px]" id="modaloverlay">
+                <div class="segment-content hidden m-20 border" id="education-content2">
+                    <div class="segment-text text-[0.6em] p-3">
+                        <div class="border border-white text-center">
+                            <div><b>Lithan Education</b></div>
+                            <div>2019-2020</div>
+                            <div>Digital Marketing</div>
+                        </div>
+                        <div class="border border-white text-center">
+                            <div>Nanyang Technological University</div>
+                            <div>2013-2017</div>
+                            <div>Chemical Engineering</div>
+                        </div>
+                        <div class="border border-white text-center">
+                            <div>SMAK 1 PENABUR JAKARTA</div>
+                            <div>2010-2013</div>
+                        </div>
+                    </div>
+            </div>
 
-            <div class="segment-content hidden" id="education-content2">
+            <div class="segment-content hidden border m-20" id="experience-content2">
                 <div class="segment-text text-[0.6em] p-3">
                     <div class="border border-white text-center">
-                        <div><b>Lithan Education</b></div>
-                        <div>2019-2020</div>
-                        <div>Digital Marketing</div>
+                        <div><b>First Page Digital</b></div>
+                        <div>2021-2022</div>
+                        <div>Performance Marketing</div>
                     </div>
                     <div class="border border-white text-center">
-                        <div>Nanyang Technological University</div>
-                        <div>2013-2017</div>
-                        <div>Chemical Engineering</div>
+                        <div><b>igus Singapore</b></div>
+                        <div>2019-2021</div>
+                        <div>Marketing Officer</div>
                     </div>
                     <div class="border border-white text-center">
-                        <div>SMAK 1 PENABUR JAKARTA</div>
-                        <div>2010-2013</div>
+                        <div><b>Wah Joo Seng</b></div>
+                        <div>2017-2019</div>
+                        <div>Marketing Engineer</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="segment-content border hidden m-20" id="life-content2">
+                <div class="segment-text text-[0.6em] p-3">
+                    <div class="border border-white text-center">
+                        <div><b>Digital Marketing Award</b></div>
+                        <div>Participant</div>
+                    </div>
+                </div>
+            </div>
         
         </section>
     </div>
