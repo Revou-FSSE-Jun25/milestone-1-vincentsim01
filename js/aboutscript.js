@@ -101,3 +101,12 @@ function toggleDarkMode(){
     document.querySelector('footer').classList.toggle('white');
     document.getElementsByClassName('aboutintro')[0].classList.toggle('dark');
 }
+
+const modalsegmenttextcontainer = document.getElementById('aboutsegmenttextcontainer')
+const educationcontent = document.getElementById('education-content2')
+
+
+function showsegmenttext(){
+    // modalsegmenttextcontainer.classList.toggle('hidden');
+    educationcontent.classList.toggle('hidden');
+}
