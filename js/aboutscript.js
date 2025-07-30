@@ -104,33 +104,54 @@ function toggleDarkMode(){
 
 const modalsegmenttextcontainer = document.getElementById('aboutsegmenttextcontainer')
 // const educationcontent = document.getElementById('education-content2')
-
-
-function showsegmenttext(param){
-    // modalsegmenttextcontainer.classList.toggle('hidden');
-    const textcontent = document.getElementById(`${param}-content2`)
-    textcontent.classList.toggle('hidden');
-    modaloverlay.classList.toggle('hidden');
-}
-
-const modaloverlay = document.getElementById('modaloverlay');
+const modaloverlayeducation = document.getElementById('modaloverlayeducation');
+const modaloverlayexperience = document.getElementById('modaloverlayexperience');
+const modaloverlaylife = document.getElementById('modaloverlaylife');
 const modaleducation = document.getElementById('education-content2');
 const modalexperience = document.getElementById('experience-content2');
 const modallife = document.getElementById('life-content2');
 
+function showsegmenttexteducation(){
+    // modalsegmenttextcontainer.classList.toggle('hidden');
+    const textcontent = document.getElementById(`education-content2`)
+    textcontent.classList.toggle('hidden');
+    modaloverlayeducation.classList.toggle('hidden');
+}
 
-modaloverlay.addEventListener("click", function(event){
+function showsegmenttextexperience(){
+    // modalsegmenttextcontainer.classList.toggle('hidden');
+    const textcontent = document.getElementById(`experience-content2`)
+    textcontent.classList.toggle('hidden');
+    modaloverlayexperience.classList.toggle('hidden');
+}
+
+function showsegmenttextlife(){
+    // modalsegmenttextcontainer.classList.toggle('hidden');
+    const textcontent = document.getElementById(`life-content2`)
+    textcontent.classList.toggle('hidden');
+    modaloverlaylife.classList.toggle('hidden');
+}
+
+
+modaloverlayeducation.addEventListener("click", function(event){
     if(!modaleducation.contains(event.target)){
         modaleducation.classList.add('hidden');
-        modaloverlay.classList.add('hidden');
-    }
-    if(!modalexperience.contains(event.target)){
-        modalexperience.classList.add('hidden');
-        modaloverlay.classList.add('hidden');
-    }
-    if(!modallife.contains(event.target)){
-        modallife.classList.add('hidden');
-        modaloverlay.classList.add('hidden');
+        modaloverlayeducation.classList.add('hidden');
     }
 })
+
+modaloverlayexperience.addEventListener("click", function(event){
+    if(!modalexperience.contains(event.target)){
+        modalexperience.classList.add('hidden');
+        modaloverlayexperience.classList.add('hidden');
+    }
+})
+
+modaloverlaylife.addEventListener("click", function(event){
+    if(!modallife.contains(event.target)){
+        modallife.classList.add('hidden');
+        modaloverlaylife.classList.add('hidden');
+    }
+})
+
 

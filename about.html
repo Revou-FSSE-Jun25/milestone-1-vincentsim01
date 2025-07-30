@@ -104,7 +104,7 @@
                         <h3 class="segment-title">Education</h3>
                     </div>
                     <button onclick="toggleSegment('education')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105 " id="education-btn" >Expand</button>
-                    <button onclick="showsegmenttext('education')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
+                    <button onclick="showsegmenttexteducation()" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 </div>
                 <div class="segment-content hidden" id="education-content">
                     <div class="segment-text text-[0.6em] p-3">
@@ -138,7 +138,7 @@
                     
                 </div>
                 <button onclick="toggleSegment('experience')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="experience-btn">Expand</button>
-                <button onclick="showsegmenttext('experience')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
+                <button onclick="showsegmenttextexperience()" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 <div class="segment-content hidden" id="experience-content">
                     <div class="segment-text text-[0.6em] p-3">
                         <div class="border border-white text-center">
@@ -170,7 +170,7 @@
                    
                 </div>
                 <button onclick="toggleSegment('life')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:hidden cursor-pointer hover:scale-105" id="experience-btn">Expand</button>
-                <button onclick="showsegmenttext('life')" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
+                <button onclick="showsegmenttextlife()" class="expand-button text-[0.6em] bg-white/50 border p-2 rounded-md md:block cursor-pointer hover:scale-105 " id="education-btn ">Expand2</button>
                 <div class="segment-content hidden" id="life-content">
                     <div class="segment-text text-[0.6em] p-3">
                         <div class="border border-white text-center">
@@ -205,7 +205,7 @@
 
 
             </div>
-            <div class=" bg-white/90 m-5 h-[100%] hidden w-[95%] border absolute z-index-50 top-[10px]" id="modaloverlay">
+            <div class=" bg-white/90 m-5 h-[100%] hidden w-[95%] border absolute z-index-50 top-[10px]" id="modaloverlayeducation">
                 <div class="segment-content hidden m-20 border" id="education-content2">
                     <div class="segment-text text-[0.6em] p-3">
                         <div class="border border-white text-center">
@@ -224,7 +224,9 @@
                         </div>
                     </div>
             </div>
+            </div>
 
+            <div class=" bg-white/90 m-5 h-[100%] hidden w-[95%] border absolute z-index-50 top-[10px]" id="modaloverlayexperience">
             <div class="segment-content hidden border m-20" id="experience-content2">
                 <div class="segment-text text-[0.6em] p-3">
                     <div class="border border-white text-center">
@@ -244,8 +246,9 @@
                     </div>
                 </div>
             </div>
+            </div>
 
-
+            <div class=" bg-white/90 m-5 h-[100%] hidden w-[95%] border absolute z-index-50 top-[10px]" id="modaloverlaylife">
             <div class="segment-content border hidden m-20" id="life-content2">
                 <div class="segment-text text-[0.6em] p-3">
                     <div class="border border-white text-center">
