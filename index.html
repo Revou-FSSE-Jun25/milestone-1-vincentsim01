@@ -78,12 +78,18 @@
           </nav>
        </header>
 
-       <div id="popup" class="border absolute border-black bg-white rounded-p-10tr-[10px] rounded-bl-[10px] w-[85%] h-[70vh] mx-auto left-[10%] top-[15%] z-3 shadow-lg">
-        <div class="'flex items-center justify-center">     <button onclick="closepopup()" class="cursor-pointer border rounded-full bg-black text-white absolute right-[-1%] top-[-1%]"><i class="fa-solid fa-xmark"></i></button>
+       <div id="popup" class="border absolute border-black bg-white/90 p-10 md:p-20 rounded-tr-[10px] rounded-bl-[10px] w-[99%] h-[100vh] mx-auto top-[12%] z-3 shadow-lg">
+        <div class="flex items-center justify-center h-[100%] bg-[url('./assets/sale.png')] bg-no-repeat bg-cover bg-opacity-90">     
+            <button onclick="closepopup()" class="cursor-pointer border rounded-full bg-black text-white absolute right-[-1%] top-[-1%]"><i class="fa-solid fa-xmark" id="popupcontent"></i></button>
             <div class="block text-center">
                 <div>Get 50% discount</div>
+                <div>
+                    <form action="submitpopup.html">
+                        <button class="mx-auto border rounded-tr-[10px] rounded-bl-[10px] shadow-lg p-5 mt-5 mb-5 bg-white text-black hover:bg-black hover:text-white cursor-pointer">Claim Your Offer Now</button></div>
+                    </form>
+                </div>
     
-                <button class="mx-auto border rounded-tr-[10px] rounded-bl-[10px] shadow-lg p-5 mt-5 mb-5">Claim Your Offer Now</button></div>
+
    
         </div>
 
@@ -112,7 +118,7 @@
     </div>
   </section>
 
-  <section class="thetablecontainer bg-[url('https://i.ibb.co/zTgMPyWY/picture.jpg')] block mt-10 relative md:h-[80vh] bg-no-repeat bg-cover bg-top mb-10 text-black">
+  <section class="thetablecontainer bg-[url('https://i.ibb.co/zTgMPyWY/picture.jpg')] block mt-10 relative md:h-[80vh] bg-no-repeat hidden bg-cover bg-top mb-10 text-black">
     <div class="overlay absolute w-full h-full bg-white opacity-5"></div>
     <div id="tableinsideleft" class="p-5 block text-center md:w-[60%] md:text-left md:pt-15 md:pl-15">
         <h2 class="tabletitle text-[1.3em] md:text-[220%]">DO YOU NEED A WEBSITE FAST?</h2>

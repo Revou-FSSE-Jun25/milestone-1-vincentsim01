@@ -108,3 +108,13 @@ setTimeout(()=>{
 function closepopup(){
     popup.classList.add('hidden');
 }
+
+// const popupoverlay = document.getElementById('popupoverlay');
+const popupcontent = document.getElementById('popupcontent');
+
+popup.addEventListener('click', (event) => {
+    if(!popupcontent.contains(event.target)){
+        popup.classList.add('hidden');
+    }
+})
+
