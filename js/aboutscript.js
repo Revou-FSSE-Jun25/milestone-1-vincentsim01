@@ -99,7 +99,7 @@ function toggleDarkMode(){
     document.body.classList.toggle('dark');
     document.getElementsByClassName('theheader')[0].classList.toggle('dark');
     document.querySelector('footer').classList.toggle('white');
-    document.getElementsByClassName('aboutintro')[0].classList.toggle('dark');
+    document.getElementsByClassName('aboutintro')[0].classList.toggle('darkwhite');
 }
 
 const modalsegmenttextcontainer = document.getElementById('aboutsegmenttextcontainer')

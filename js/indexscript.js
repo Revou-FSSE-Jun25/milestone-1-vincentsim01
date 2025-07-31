@@ -97,3 +97,14 @@ function toggleDarkMode(){
     document.getElementsByClassName('banner')[0].classList.toggle('darkwhite')
     document.querySelector('footer').classList.toggle('white')
 }
+
+
+const popup = document.getElementById('popup');
+
+setTimeout(()=>{
+    popup.classList.remove('hidden')
+},100)
+
+function closepopup(){
+    popup.classList.add('hidden');
+}
