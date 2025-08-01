@@ -11,8 +11,8 @@ const initialX = -450;
 const initialY = 0;
 
 // Animation parameters
-const startScroll = 50;
-const endScroll = 250;
+const startScroll = 100;
+const endScroll = 400;
 
 function updateAnimation() {
     const scrollY = window.pageYOffset;
@@ -59,8 +59,8 @@ const initialXskill = -550;
 const initialYskill = 0;
 
 // Animation parameters
-const startScrollskill = 400;
-const endScrollskill = 700;
+const startScrollskill = 500;
+const endScrollskill = 1000;
 
 function updateAnimationskill() {
     const scrollYskill = window.pageYOffset;
